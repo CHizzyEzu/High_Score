@@ -61,6 +61,13 @@ int main()
 	}
 	else if (play1Input == randplayer2)
 	{
+		// Verify Player 1's answer
+		cout << "Player 1 inputted the value:  " << play1Input << endl;
+		cin.ignore();
+
+		//Player 2 Input 
+		cout << "Player 2 inputted the value:  " << randplayer2 << endl;
+
 		cout << "Uh....I guess you tied. Try again, I guess.  " << endl;
 	}
 	else 

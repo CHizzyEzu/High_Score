@@ -14,7 +14,7 @@ int main()
 	srand(seed);
 
 	// Player variables
-	double player2;
+	double randplayer2;
 
 	// Input variable
 	int play1Input;
@@ -23,7 +23,7 @@ int main()
 	const int MIN_VALUE = 1;
 	const int MAX_VALUE = 10;
 
-	player2 = (rand() % (MAX_VALUE - MIN_VALUE + 1)) + MIN_VALUE;
+	randplayer2 = (rand() % (MAX_VALUE - MIN_VALUE + 1)) + MIN_VALUE;
 
 	// Player 1 Input
 	cout << "Want to test your luck player 1?  " << endl;
@@ -36,40 +36,37 @@ int main()
 
 		cout << "Hey knock it off those are invalid values! " << endl;
 	}
-	else
+	else if (play1Input > randplayer2)
 	{
-		if (play1Input > player2)
-		{
-			// Verify Player 1's answer
-			cout << "Player 1 inputted the value:  " << play1Input << endl;
-			cin.ignore();
+		// Verify Player 1's answer
+		cout << "Player 1 inputted the value:  " << play1Input << endl;
+		cin.ignore();
 
-			//Player 2 Input 
-			cout << "Player 2 inputted the value:  " << player2 << endl;
-			cin.get();
+		//Player 2 Input 
+		cout << "Player 2 inputted the value:  " << randplayer2 << endl;
 
-			cout << "Congratulations player 1, you won!!  " << endl;
-
-		}
-		else if (play1Input < player2)
-		{
-			// Verify Player 1's answer
-			cout << "Player 1 inputted the value:  " << play1Input << endl;
-			cin.ignore();
-
-			//Player 2 Input 
-			cout << "Player 2 inputted the value:  " << player2 << endl;
-
-			cout << "Uh oh you lost player 1, maybe try again?  " << endl;
-		}
-		else
-		{
-			cout << "Uh....I guess you tied. Try again, I guess.  " << endl;
-		}
+		cout << "Congratulations player 1, you won!!  " << endl;
 	}
-
 	
+	else if (play1Input < randplayer2)
+	{
+		// Verify Player 1's answer
+		cout << "Player 1 inputted the value:  " << play1Input << endl;
+		cin.ignore();
 
+		//Player 2 Input 
+		cout << "Player 2 inputted the value:  " << randplayer2 << endl;
+
+		cout << "Uh oh you lost player 1, maybe try again?  " << endl;
+	}
+	else if (play1Input == randplayer2)
+	{
+		cout << "Uh....I guess you tied. Try again, I guess.  " << endl;
+	}
+	else 
+	{
+		cout << "What are you doing.....  " << endl;
+	}
 	
 
 	return 0;

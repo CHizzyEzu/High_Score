@@ -7,7 +7,7 @@
 #include <ctime> // time function
 using namespace std; 
 
-int main()
+int Score()
 {
 	//System time and random number generation
 	unsigned seed = time(0);

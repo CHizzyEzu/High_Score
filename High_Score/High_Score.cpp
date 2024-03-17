@@ -2,7 +2,6 @@
 // Creating a n if/else statement to create different outputs for various statements
 
 #include <iostream> // Output preprocessor
-#include <string> //string variable
 #include <cstdlib> //random number 
 #include <ctime> // time function
 using namespace std; 
